@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  font-family: "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(0, 0, 0);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.blog {
+  /* margin-top: 50px; */
+  padding-top: 60px;
+}
+.navBar {
+  color: aliceblue;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 100;
+}
+.homeFirstBg {
+  left: -75%;
+  top: 15%;
+  border-radius: 40%;
+}
+.homeSecondBg {
+  left: 75%;
+  top: 15%;
+  border-radius: 40%;
+}
+
+/* page header name styling starts here  */
+
+.geeks {
+  text-align: center;
+}
+
+.geeks span {
+  font-size: 50px;
+  font-weight: 700;
+  color: green;
+  position: relative;
+  text-shadow: -1px 0 0 white;
+}
+
+.geeks span::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  color: #fff;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: rotateY(25deg);
+}
+
+.geeks span:hover::before {
+  transform: perspective(1000px) rotate(-67deg);
+}
+
+/* page header name stylings ends here  */
+
+.active {
+  display: block;
+}
+
+/* overlay scaling  */
+.portOverlay {
+  opacity: 0;
+  transform: scale(90%);
+  background-color: #03ac149f;
+}
+.portOverlay:hover {
+  opacity: 1;
+  transform: scale(100%);
+  transition: 0.5s;
+}
